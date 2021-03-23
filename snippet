@@ -1,0 +1,31 @@
+docker run hello-world
+
+docker pull nginx
+
+docker run nginx -p 8080:80
+
+docker run nginx -d -p 8080:80
+
+docker ps 
+
+docker ps -a
+
+docker images
+
+docker exec -it CONTAINER /bin/bash
+
+echo "<h1>DevOps Course 1</h1>" > /usr/share/nginx/html/index.html
+
+docker build . -t custom_nginx
+
+docker run -d -p 8081:80 custom_nginx
+
+docker run -v ~/work/other/statics:/usr/share/nginx/html/ -d -p 8082:80 custom_nginx
+
+docker rm CONTAINER
+
+docker rmi IMAGES
+
+docker-compose up 
+
+docker-compose down
